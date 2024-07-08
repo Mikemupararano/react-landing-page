@@ -1,7 +1,141 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React Landing Page
 
+This project is a landing page created with React using Vite. It is designed to be deployed on GitHub Pages.
+
+Table of Contents
+Getting Started
+Development
+Build
+Deployment
+Project Structure
+License
+
+## Getting Started
+To get started with this project, you'll need to have Node.js and npm installed on your machine.
+
+## Clone the repository:
+
+bash
+Copy code
+git clone https://github.com/Mikemupararano/react-landing-page.git
+cd react-landing-page
+
+Install dependencies:
+
+bash
+Copy code
+npm install
+
+## Development
+To run the project locally:
+
+bash
+Copy code
+npm run dev
+This will start a development server and you can view the application by navigating to http://localhost:3000 in your browser.
+
+## Build
+To build the project for production:
+
+bash
+Copy code
+npm run build
+This will generate a dist directory containing the production build of your application.
+
+## Deployment
+GitHub Pages
+To deploy your React landing page to GitHub Pages:
+
+Install the gh-pages package:
+
+bash
+Copy code
+npm install --save-dev gh-pages
+Update package.json:
+
+Add the following homepage field:
+
+json
+Copy code
+"homepage": "https://your-username.github.io/react-landing-page"
+Add the following predeploy and deploy scripts:
+
+json
+Copy code
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+}
+Deploy the project:
+
+bash
+Copy code
+npm run deploy
+This will build the project and deploy the contents of the dist directory to the gh-pages branch of your repository.
+
+GitHub Actions (Optional)
+You can also automate the deployment process using GitHub Actions. Create a file named deploy.yml in the .github/workflows directory with the following content:
+
+yaml
+Copy code
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        run: npm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+This workflow will automatically build and deploy your project to GitHub Pages whenever you push changes to the main branch.
+
+## Project Structure
+Here is an overview of the project's structure:
+
+arduino
+Copy code
+react-landing-page/
+├── public/
+│   └── index.html
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── styles/
+├── .gitignore
+├── index.html
+├── package.json
+├── README.md
+└── vite.config.js
+
+## Credits
+I have used this resource: https://www.youtube.com/watch?v=GVjIflROwJ4&t=1s
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for more details.
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
