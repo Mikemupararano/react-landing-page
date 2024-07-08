@@ -17,21 +17,21 @@ To get started with this project, you'll need to have Node.js and npm installed 
 ## Clone the repository:
 
 bash
-Copy code
+
 git clone https://github.com/Mikemupararano/react-landing-page.git
 cd react-landing-page
 
 Install dependencies:
 
 bash
-Copy code
+
 npm install
 
 ## Development
 To run the project locally:
 
 bash
-Copy code
+
 npm run dev
 This will start a development server and you can view the application by navigating to http://localhost:3000 in your browser.
 
@@ -39,7 +39,7 @@ This will start a development server and you can view the application by navigat
 To build the project for production:
 
 bash
-Copy code
+
 npm run build
 This will generate a dist directory containing the production build of your application.
 
@@ -50,19 +50,19 @@ To deploy your React landing page to GitHub Pages:
 Install the gh-pages package:
 
 bash
-Copy code
+
 npm install --save-dev gh-pages
 Update package.json:
 
 Add the following homepage field:
 
 json
-Copy code
-"homepage": "https://your-username.github.io/react-landing-page"
+
+"homepage": "https://Mikemupararano.github.io/react-landing-page"
 Add the following predeploy and deploy scripts:
 
 json
-Copy code
+
 "scripts": {
   "predeploy": "npm run build",
   "deploy": "gh-pages -d dist"
@@ -70,7 +70,7 @@ Copy code
 Deploy the project:
 
 bash
-Copy code
+
 npm run deploy
 This will build the project and deploy the contents of the dist directory to the gh-pages branch of your repository.
 
@@ -78,7 +78,7 @@ GitHub Actions (Optional)
 You can also automate the deployment process using GitHub Actions. Create a file named deploy.yml in the .github/workflows directory with the following content:
 
 yaml
-Copy code
+
 name: Deploy to GitHub Pages
 
 on:
@@ -115,7 +115,7 @@ This workflow will automatically build and deploy your project to GitHub Pages w
 Here is an overview of the project's structure:
 
 arduino
-Copy code
+
 react-landing-page/
 ├── public/
 │   └── index.html
