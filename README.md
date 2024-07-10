@@ -110,9 +110,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 This workflow will automatically build and deploy your project to GitHub Pages whenever you push changes to the main branch.
-
+Here is a
 ## Project Structure
 Here is an overview of the project's structure:
+![A screenshot of the first page](./src/assets/landing-page-screenshot1.png)
+
+![A screenshot of the first page](./src/assets/landing-page-screenshot2.png)
 
 arduino
 
